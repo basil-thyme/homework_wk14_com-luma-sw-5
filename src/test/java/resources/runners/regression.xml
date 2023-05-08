@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="regression suite" verbose="1">
+    <groups>
+        <run>
+            <include name="regression">
+            </include>
+        </run>
+    </groups>
+
+    <listeners>
+        <listener class-name="com.softwaretestingboard.magento.customlisteners.CustomListeners"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
+    <test name="Gear test">
+        <classes>
+            <class name="com.softwaretestingboard.magento.testsuite.GearTest"></class>
+        </classes>
+    </test>
+
+    <test name="Men test">
+        <classes>
+            <class name="com.softwaretestingboard.magento.testsuite.MenTest"></class>
+        </classes>
+    </test>
+
+    <test name="Women test">
+        <classes>
+            <class name="com.softwaretestingboard.magento.testsuite.WomenTest"></class>
+        </classes>
+    </test>
+
+
+</suite>
